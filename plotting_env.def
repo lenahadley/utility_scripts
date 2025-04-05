@@ -1,0 +1,34 @@
+BootStrap: library
+From: ubuntu:18.04
+
+%environment
+    # set up all essential environment variables
+    export LC_ALL=C
+    export PATH=/miniforge/bin:$PATH
+    
+    # activate conda environment
+    source activate base;
+    conda activate;
+
+%post
+    # update and install essential dependencies
+    apt-get -y update
+    apt-get update && apt-get install -y automake build-essential bzip2 wget git default-jre unzip
+    
+    # download, install, and update miniconda3
+    wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+    bash Miniforge3-Linux-x86_64.sh -b -f -p /miniforge
+    rm Miniforge3-Linux-x86_64.sh
+    
+    # install dependencies via conda
+    export PATH="/miniforge/bin:$PATH"
+    
+    mamba install anaconda::pandas conda-forge::numpy conda-forge::plotly conda-forge::matplotlib conda-forge::zstandard conda-forge::pretty_html_table anaconda::jinja2
+    mamba install anaconda::seaborn
+    mamba install conda-forge::plotly
+    pip install Jinja2
+
+%labels
+    Author DJB
+    Version v0.1
+    MyLabel pypltenv
