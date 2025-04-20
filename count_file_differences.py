@@ -4,8 +4,7 @@
 
 __version__ = '0.1'
 __date__ = '09-04-2024'
-__author__ = 'D.J.BERGER'
-
+__author__ = 'L.O.HADLEY'
 
 ###### Imports
 
