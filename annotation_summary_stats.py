@@ -3,8 +3,8 @@
 # Calculates assembly statistics for each assembled genome in a directory or a single file.
 
 __version__ = '0.1'
-__date__ = '09-06-2024'
-__author__ = 'D.J.BERGER'
+__date__ = '01-05-2025'
+__author__ = 'L.O.HADLEY'
 
 ###### Imports
 
