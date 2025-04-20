@@ -145,6 +145,27 @@ Usage:
   ```
 
 
+## *annotation_summary_stats.py*
+- Calculates summary stats for a transcriptome assembly (CDS or proteins)
+- **Input:** takes a FASTA file with nucleotides or protein sequences
+
+Usage:
+  ```
+  summary_stats.py -f <FASTA>
+  summary_stats.py -f <FASTA> --protein
+  summary_stats.py -f <FASTA> --trinity
+  ```
+Parameters:
+  ```
+Get basic stats for a transcriptome or protein assembly.
+
+options:
+  -h, --help         show this help message and exit
+  -f, --fasta FASTA  Transcript or protein FASTA file
+  --trinity          Parse Trinity-style gene names (for transcript mode)
+  --protein          Switch to protein mode (calculates in amino acids)
+  ```
+
 
 
 
