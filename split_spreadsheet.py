@@ -4,8 +4,7 @@
 
 __version__ = '0.1'
 __date__ = '03-03-2024'
-__author__ = 'D.J.BERGER'
-
+__author__ = 'L.O.HADLEY'
 
 ###### Imports
 import pandas as pd
