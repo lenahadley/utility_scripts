@@ -129,6 +129,26 @@ Parameters:
   ```
 - **Output:** FASTA file
 
+## *find_fasta_gaps.py*
+- Reports gaps (runs of Ns) in FASTA sequences in BED format
+- **Input:** FASTA file
+
+Usage:
+  ```
+  find_fasta_gaps.py --fasta <FASTA>
+  find_fasta_gaps.py --fasta_dir <FASTA directory>/
+  ```
+Parameters:
+  ```
+  -h, --help            show this help message and exit
+  --fasta_dir FASTA_DIR
+                        Directory containing FASTA files
+  --fasta FASTA         Single FASTA file
+  --gap GAP             Minimum gap length to report (default: 1)
+  --output OUTPUT       Output file prefix (optional) ['gaps']
+  --version             show program's version number and exit
+  ```
+- **Output:** BED file
 ## *split_spreadsheet.py*
 - Converts an excel spreadsheet into individual sheets, named after each tab name.
 
