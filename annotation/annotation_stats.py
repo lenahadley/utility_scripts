@@ -1,5 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
+# 
+
+__version__ = '0.1'
+__date__ = '19-08-2024'
+__author__ = 'L.O.HADLEY'
+
+###### Imports
 import os
 import csv
 import argparse
@@ -7,7 +14,9 @@ from collections import defaultdict
 from Bio import SeqIO
 import subprocess
 
-# TE-related InterPro IDs (can extend if needed)
+##### Misc
+
+# TE-related InterPro IDs
 TE_INTERPRO_IDS = {
     "IPR001207",  # Reverse transcriptase
     "IPR000477",  # Integrase catalytic domain
@@ -20,7 +29,7 @@ TE_INTERPRO_IDS = {
     "IPR027122",  # Transposable element
 }
 
-# Trusted InterProScan sources/databases for confident annotation
+# Trusted InterProScan sources/databases
 TRUSTED_SOURCES = {
     "Pfam",
     "SMART",
@@ -34,6 +43,8 @@ TRUSTED_SOURCES = {
     # Add or remove sources as per your trust level
 }
 
+
+###### Functions
 
 def parse_gff3(gff_file):
     transcripts = {}
