@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 
+
+__version__ = '0.1'
+__date__ = '19-08-2024'
+__author__ = 'L.O.HADLEY'
+
+###### Imports
+
 from collections import defaultdict
 import sys
+
+###### Functions
 
 def parse_attributes(attr_string):
     return dict(pair.split('=') for pair in attr_string.strip().split(';') if '=' in pair)
