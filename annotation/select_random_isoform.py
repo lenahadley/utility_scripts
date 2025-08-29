@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 
+__version__ = '0.1'
+__date__ = '19-08-2024'
+__author__ = 'L.O.HADLEY'
+
+###### Imports
+
 import argparse
 import random
 from collections import defaultdict
+
+###### Functions
 
 def parse_gff3(file_path):
     genes = defaultdict(list)
