@@ -1,10 +1,18 @@
 #!/usr/bin/env python
 
+__version__ = '0.1'
+__date__ = '22-08-2024'
+__author__ = 'L.O.HADLEY'
+
+###### Imports
+
 import os
 import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 import argparse
+
+###### Misc
 
 plot_colors = [
     "#ff4a24", "#19D3F3", "#F58518", "#e60019", "#006fdf", "#FECB52", "#636EFA",
@@ -12,6 +20,8 @@ plot_colors = [
     "#ff0b6e", "#00d395", "#f2b701", "#999933", "#E45756", "#332288", "#cf1c90",
     "#FFA15A", "#ccebc5", "#80b1d3", "#FF9DA6", "#002b90", "#008695", "#11a579"
 ]
+
+###### Functions
 
 # Extract sample ID and group label (now include 3 fields for full sample label)
 def extract_sample_info(filename):
