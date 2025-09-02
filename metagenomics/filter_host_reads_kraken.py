@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 
+__version__ = '0.1'
+__date__ = '19-08-2024'
+__author__ = 'L.O.HADLEY'
+
+###### Imports
+
 import argparse
 import gzip
 from collections import defaultdict
 from Bio import SeqIO
+
+###### Functions
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Filter host reads using lineage tracing with gzip output and removal summary.")
