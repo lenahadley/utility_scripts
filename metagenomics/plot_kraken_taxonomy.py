@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 
+
+__version__ = '0.1'
+__date__ = '22-08-2024'
+__author__ = 'L.O.HADLEY'
+
+###### Imports
+
 import os
 import argparse
 import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 
-# Expanded Kraken2 rank mapping including variants
+###### Misc
+
+# Kraken2 rank mapping including variants
 RANK_MAP = {
     'U': 'Unclassified',
     'R': 'Unclassified', 'R1': 'Unclassified', 'R2': 'Unclassified', 'R3': 'Unclassified', 'R4': 'Unclassified', 'R5': 'Unclassified', 'R6': 'Unclassified', 'R7': 'Unclassified',
@@ -43,6 +52,8 @@ RANK_COLORS = {
     'Other':   '#66c2a5'   # Teal-green
 }
 
+
+###### Functions
 
 def parse_kraken_report(report_path):
     df = pd.read_csv(
