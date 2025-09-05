@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+__version__ = '0.1'
+__date__ = '19-08-2024'
+__author__ = 'L.O.HADLEY'
+
+###### Imports
+
 import os
 import argparse
 import pandas as pd
@@ -7,12 +13,15 @@ import plotly.express as px
 import plotly.io as pio
 
 
+###### Misc
+
 BAR_COLORS = {
     "Initial": "#e76f51",         # Blue
     "Post-decontamination": "#2a9d8f",  # Orange
     "Retained %": "#264653"           # Green (for proportion plot)
 }
 
+###### Functions
 
 def insert_spacers(df, label_col="simple_id", group_col="group_prefix"):
     sorted_df = df.sort_values(by=group_col)
@@ -121,7 +130,7 @@ def plot_host_proportion(df, output_file):
     )
 
     pio.write_html(fig, output_file)
-    print(f"✅ Host proportion plot saved to: {output_file}")
+    print(f"Host proportion plot saved to: {output_file}")
 
 
 def main():
