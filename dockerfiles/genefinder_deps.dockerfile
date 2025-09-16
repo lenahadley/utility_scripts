@@ -27,6 +27,3 @@ RUN micromamba clean --all --yes
 
 # Activate the environment, 
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
-
-ENV PATH="/opt/conda/bin/:$PATH"
-
