@@ -10,7 +10,6 @@ import argparse
 import random
 import csv
 
-
 ###### Functions
 
 # Read file and subset rows
